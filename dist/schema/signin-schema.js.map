@@ -1,0 +1,1 @@
+{"version":3,"file":"signin-schema.js","sourceRoot":"","sources":["../../src/schema/signin-schema.ts"],"names":[],"mappings":";;;AAAA,yDAAuC;AAEvC,MAAM,MAAM,GAAG;IACX,wBAAI,CAAC,SAAS,CAAC,CAAC,GAAG,EAAE,CAAC,OAAO,EAAE,CAAC,WAAW,CAAC,mBAAmB,CAAC;IAChE,8EAA8E;IAC9E,wBAAI,CAAC,UAAU,CAAC,CAAC,QAAQ,CAAE,EAAC,GAAG,EAAE,CAAC,EAAC,CAAC,CAAC,WAAW,CAAC,yCAAyC,CAAC;CAC9F,CAAC;AAEgB,8BAAY"}

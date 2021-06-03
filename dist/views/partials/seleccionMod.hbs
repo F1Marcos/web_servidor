@@ -1,0 +1,32 @@
+{{userLoginOk.nombre}}
+<form action="../signMod" method="post">
+    <table border="1" style="width:40%">
+        <theader>
+            <th>Id</th>
+            <th>Nombre</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Fecha alta</th>
+            <th>Activado</th>
+            <th>Perfil</th>
+        </theader>
+        {{#if user}}
+        <tr>
+            <td><input type="text" name="id" value="{{user.id}}" class="form-control" readonly></td>
+            <td><input type="text" name="nombre" value="{{user.nombre}}" class="form-control" autofocus></td>
+            <td><input type="password" name="password" value="{{user.password}}" class="form-control"></td>
+            <td><input type="email" name="email" value="{{user.email}}" class="form-control"></td>
+            <td><input type="text" name="rol" value="{{user.rol}}" class="form-control"></td>
+            <td><input type="date" name="alta" value="{{user.alta}}" class="form-control"></td>
+            <td><input type="text" name="activado" value="{{user.activado}}" class="form-control"></td>
+            <td><input type="text" name="perfil" value="{{user.perfil}}" class="form-control"></td>
+        </tr>
+        {{else}}
+        <tr>
+            <td colspan="4">No hay mas filas</td>
+        </tr>
+        {{/if}}
+    </table>
+    <button class="btn btn-success" href="/user/signMod">Aplicar</button>
+</form>
