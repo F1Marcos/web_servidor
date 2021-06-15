@@ -1,4 +1,3 @@
-
 import {Request, Response, NextFunction} from "express";
 import jwt from "jsonwebtoken";
 
@@ -12,5 +11,4 @@ export const TokenValidation = (req:Request, res:Response, next:NextFunction) =>
 	if(!token)
         return res.status(401).json("Acceso denegado :P");
 	next();
-    
 }

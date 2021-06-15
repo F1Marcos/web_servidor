@@ -131,8 +131,7 @@ class UserController {
             const result = yield userModels_1.default.signMod(req.body, req.body.id);
             //res.send('Usuario '+ req.params.id +' actualizado!!!');
             //return res.json({ text: 'updating a user ' + id });
-            res.redirect("/user/controls");
-            //res.render('partials/controls', { users: usuarios,mi_session:true });
+            return res.status(200).json({ message: "Update user " + req.params });
         });
     }
     delete(req, res) {
@@ -142,7 +141,8 @@ class UserController {
             const { id } = req.params; // hacemos detrucsturing y obtenemos el ID. Es decir, obtenemos una parte de un objeto JS.
             const result = yield userModels_1.default.eliminar(id);
             // return res.json({ text: 'deleting a user ' + id });
-            res.redirect('../control');
+            // res.redirect('../control');
+            return res.status(200).json({ message: "Delete user " + req.params });
         });
     }
     //FIN CRUD
