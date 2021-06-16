@@ -40,7 +40,7 @@ class UserController {
             }
             if (result.nombre == usuario && result.password == password) {
                 const token = jsonwebtoken_1.default.sign({ _id: usuario.id }, "secretKey");
-                return res.status(200).json({ message: "Bienvenido " + result.nombre, token: token });
+                return res.status(200).json({ message: "Bienvenido " + result.nombre, token: token, usuario: result.nombre, rol: result.rol });
             }
             return res.status(404).json({ message: "Usuario no registrado" });
         });
